@@ -1,3 +1,8 @@
+# Table of Contents
+1. [Getting Started](#getting-started)
+2. [DBRX-Instruct inference with vLLM](#vllm)
+3. [DBRX-Instruct inference with TGI](#tgi)
+
 # Getting Started
 
 ## Crusoe CLI
