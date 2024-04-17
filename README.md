@@ -70,6 +70,9 @@ This will kick off the download for the entire repo which is ~490 GiB. Luckily, 
 ### Clone DBRX-Instruct-Tokenizer
 We'll use the fast tokenizer provided by Xenova, so again navigate to `/workspace/models/` and clone [this repository](https://huggingface.co/Xenova/dbrx-instruct-tokenizer/tree/main).
 
+## Clone this repo
+We'll make a directory to hold code in on our boot disk. Run `mkdir ~/dev && cd ~/dev` and clone into this repository with `git clone git@github.com:crusoecloud/dbrx_inference_tutorial.git && cd dbrx_inference_tutorial/`.
+
 ## Peripherals
 Before we jump into our inference tutorials, let's install some quality-of-life peripherals. First, run `apt-get update` then `apt-get install tmux`. We'll often have two or more processes running, so it'll be nice to have multiple windows to monitor each and tmux is a great solution for session and window management.
 
@@ -77,11 +80,13 @@ To manage dependencies, we'll use `virtualenv` which can be installed with `apt 
 
 If you run into issues with storage, `ncdu` is a useful tool for easy navigation.
 
-## Clone this repo
-We'll make a directory to hold code in on our boot disk. Run `mkdir ~/dev && cd ~/dev` and clone into this repository with `git clone git@github.com:crusoecloud/dbrx_inference_tutorial.git && cd dbrx_inference_tutorial/`.
+Additionally, I recommend using [ssh-remote](https://code.visualstudio.com/docs/remote/ssh#_connect-to-a-remote-host) with VSCode to connect and interact with remote code (unless you're a vim wizard).
 
 # vLLM
 The fastest way to get up and running with DBRX-Instruct is [vLLM](https://github.com/vllm-project/vllm). In a few steps, we'll have a high-performance, OpenAI-API compatible server up and running. For more details, reference the README in `vLLM/` in this repo.
+
+# TGI
+To serve DBRX-Instruct through `text-generation-inference` by HuggingFace, refer to the README in `tgi/` in this repo.
 
 
 
