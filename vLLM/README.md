@@ -16,4 +16,4 @@ Activate the right pane and run this command to start the server: `python -m vll
 
 In the server pane, you'll see running metrics for throughput average and resource usage. On the left, you'll see a print-out of the server response.
 
-*Congrats!* You have a scalable backend with continuous batching capable of serving concurrent users with DBRX-Instruct.
+*Congrats!* You have a scalable backend with continuous batching capable of serving concurrent users with DBRX-Instruct. Note that this defaults to 4k context length and requires some modifications to reach 32k. In the next part of this tutorial, we'll look at how to optimize inference.
