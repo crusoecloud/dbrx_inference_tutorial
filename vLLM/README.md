@@ -1,16 +1,13 @@
 # Getting Started
 Ensure that you have configured your VM according to the README in the root of this repository before proceeding.
 
-## Python
-If you want to utilize the vLLM Python interface, we'll have to set up our dependencies.
+## Dependencies
+Initialize a virtualenv with `virtualenv venv` and activate it with `source venv/bin/activate`. Install dependencies with `pip install -r requirements.txt`.
 
-### Dependencies
-Initialize a virtualenv with `virtualenv venv` and activate it with `source venv/bin/activate`. Install dependencies with `pip install -r requirements.txt'.
-
-### vllm_example.py
+## vllm_example.py
 The simplest example, pulled from the vLLM repo, only requires a couple of lines to work with with our setup. We point the model and tokenizer paths to our local directories and set `tensor_parallel_size` to 8 when initializing our `LLM` to shard the model across GPUs in our L40S node.
 
-### OpenAI API Server
+## OpenAI API Server
 First, start a tmux session with `tmux new -s vllm`. After executing the previous command, you'll be automatically attached to the session and can detach at any time with `CTRL+b` then `d`. To re-attach to that session, do `tmux a -t vllm`.
 
 Now, we'll split our tmux session into two panes (one for the client and one for the server). Make sure you are attached to the tmux session, then do `CTRL+b` then `%`. This will split our tmux session into two vertical panes. If you wish to navigate between the two, simply do `CTRL+b` then press the corresponding arrow key to switch between left/right.
