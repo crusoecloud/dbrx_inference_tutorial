@@ -2,7 +2,7 @@
 Ensure that your environment is set up according to the instructions in the root of this repository. To run text-generation-inference, we'll use Docker which is pre-installed in our disk image.
 
 ## Configure tmux
-Same as for vllm, we'll set up two panes to monitor our client and server. Create a tmux session with `tmux new -s tgi` which will automatically attach. Create a vertical plane with `ctrl+b` then `%`. Navigate to the right pane where we will start the server. Run the below command to download and run the docker container.
+Same as for vllm, we'll set up two panes to monitor our client and server. Create a tmux session with `tmux new -s tgi` which will automatically attach. Create a split vertical pane with `ctrl+b` then `%`. Navigate to the right pane where we will start the server. Run the below command to download and run the docker container.
 
 ```bash
 docker run --gpus all --shm-size 1g -p 8080:80 -v /workspace/models:/models ghcr.io/huggingface/text-generation-inference:latest --model-id /models/dbrx-instruct --tokenizer-config-path /models/dbrx-instruct-tokenizer/tokenizer_config.json --num-shard 8
