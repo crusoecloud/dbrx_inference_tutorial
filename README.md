@@ -1,3 +1,5 @@
+# 80 tok/s with DBRX-Instruct in ~15 minutes
+
 # Table of Contents
 1. [Getting Started](#getting-started)
 2. [DBRX-Instruct inference with vLLM](#vllm)
@@ -93,6 +95,9 @@ The fastest way to get up and running with DBRX-Instruct is [vLLM](https://githu
 # TGI
 To serve DBRX-Instruct through `text-generation-inference` by HuggingFace, refer to the README in `tgi/` in this repo.
 
+# Cleaning Up
+To delete our VM and the disk, we can simply run the following commands using the CLI:
 
-
-
+```bash
+crusoe compute vms delete --name dbrx-inference && crusoe storage disks delete dbrx-data
+```
